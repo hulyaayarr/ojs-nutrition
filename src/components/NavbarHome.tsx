@@ -6,15 +6,6 @@ import Button from "react-bootstrap/Button";
 
 const NavbarHome = () => {
   return (
-    // <div>
-    //   <button name="searchterm" type="submit" id="searchterm">
-    //     <img src="/src/assets/navbar/menu.png" alt="" />
-    //   </button>
-    //   <img src="/src/assets/navbar/LOGO_Siyah.png" alt="" />
-    //   <button>
-    //     <img src="/src/assets/navbar/basket.svg.png" alt="" />
-    //   </button>
-    // </div>
     <Navbar expand="lg">
       <Container>
         <div className="d-flex">
@@ -22,8 +13,9 @@ const NavbarHome = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto ">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#link">Link</Nav.Link>
+                <Nav.Link href="#home">HESABIM</Nav.Link>
+                <Nav.Link href="#link">MÜŞTERİ YORUMLARI</Nav.Link>
+                <Nav.Link href="#link">İLETİŞİM</Nav.Link>
                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">
@@ -41,7 +33,7 @@ const NavbarHome = () => {
             </Navbar.Collapse>
           </div>
           <div>
-            <Navbar.Brand href="#home">
+            <Navbar.Brand className="order-md-1" href="#home">
               <img src="/src/assets/navbar/LOGO_Siyah.png" alt="" />
             </Navbar.Brand>
           </div>
@@ -52,12 +44,14 @@ const NavbarHome = () => {
           </div>
         </div>
         <div className="search">
-          <i className="fa fa-search" aria-hidden="true"></i>
-          <input
-            className="input-search"
-            placeholder="Aradığınız ürünü yazınız."
-            type="text"
-          />
+          <div className="position-relative d-flex align-items-center">
+            <i className="fa fa-search search-icon" aria-hidden="true"></i>
+            <input
+              className="input-search"
+              placeholder="Aradığınız ürünü yazınız."
+              type="text"
+            />
+          </div>
         </div>
       </Container>
     </Navbar>

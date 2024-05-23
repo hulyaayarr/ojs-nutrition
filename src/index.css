@@ -6,6 +6,12 @@
   background-color: transparent !important;
   border: none !important;
 }
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  color: #aaa;
+}
 .input-search {
   width: 390px;
   height: 36px;
@@ -14,4 +20,7 @@
   border: none;
   opacity: 0px;
   background: #f3f3f3;
+}
+.inspect-img {
+  border-radius: 10px;
 }
