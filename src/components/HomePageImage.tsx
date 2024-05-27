@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Row } from "react-bootstrap";
 
 const HomePageImage = () => {
   const [device, setDevice] = useState(getDevice(window.innerWidth));
@@ -25,7 +26,7 @@ const HomePageImage = () => {
     }
   }
   return (
-    <>
+    <Row>
       {device === "phone" && (
         <img
           src="/src/assets/homepage-pictures/phone.png"
@@ -47,7 +48,7 @@ const HomePageImage = () => {
           className="img-fluid"
         />
       )}
-    </>
+    </Row>
   );
 };
 
