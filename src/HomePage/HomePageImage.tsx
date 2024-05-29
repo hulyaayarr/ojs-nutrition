@@ -17,7 +17,7 @@ const HomePageImage = () => {
   }, []);
 
   function getDevice(width: number) {
-    if (width < 768) {
+    if (width <= 768) {
       return "phone";
     } else if (width <= 1024) {
       return "tablet";

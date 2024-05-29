@@ -1,5 +1,5 @@
 import { Container, Row } from "react-bootstrap";
-import HomePageInspectPictures from "../components/HomePageInspectPictures";
+import HomePageInspectPictures from "../components/HomePage/HomePageInspectPictures";
 
 const HomePageInspect = () => {
   const inspectProducts = [

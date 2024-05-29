@@ -1,5 +1,5 @@
 import { Container, Row } from "react-bootstrap";
-import HomePageBestSellerProducts from "../components/HomePageBestSellerProducts";
+import HomePageBestSellerProducts from "../components/HomePage/HomePageBestSellerProducts";
 
 const HomePageBestSeller = () => {
   return (
