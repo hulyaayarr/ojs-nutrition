@@ -1,5 +1,10 @@
 import Rating from "@mui/material/Rating";
 import { Col } from "react-bootstrap";
+// import { Link, useLoaderData } from "react-router-dom";
+
+// interface PageData {
+//   productId: number;
+// }
 
 const HomePageBestSellerProducts = ({
   imageSource,
@@ -20,9 +25,18 @@ const HomePageBestSellerProducts = ({
   saleRate?: number;
   priceBeforeSale?: number;
 }) => {
+  // const pageData = useLoaderData() as PageData;
+  // if (!pageData || !pageData.productId) {
+  //   return <div>Error: Product data not found.</div>;
+  // }
+
   return (
     <>
       <Col xs={6} lg={4} xl={2} className="text-center position-relative">
+        {/* <Link
+          to={`/product/${pageData.productId}`}
+          style={{ textDecoration: "none", color: "#000" }}
+        > */}
         {saleRate ? (
           <>
             <div className="sale-red position-absolute">
@@ -52,6 +66,7 @@ const HomePageBestSellerProducts = ({
         ) : (
           <p className="bestSeller-price">{price} TL</p>
         )}
+        {/* </Link> */}
       </Col>
     </>
   );

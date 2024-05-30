@@ -21,6 +21,18 @@
   opacity: 0px;
   background: #f3f3f3;
 }
+.down-navbar {
+  background: #222222;
+}
+
+.dark-nav {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14.53px;
+  font-weight: 400;
+  line-height: 35px;
+  text-align: center;
+}
 .inspect-img {
   border-radius: 10px;
   width: 384px;

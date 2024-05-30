@@ -2,7 +2,7 @@ import { Container, Row } from "react-bootstrap";
 
 const HomePageHeader = () => {
   return (
-    <Container fluid className="px-0 me-0 pe-0 overflow-x-hidden">
+    <Container fluid className="px-0 me-0 pe-0 overflow-x-hidden ">
       <Row>
         <img
           className="img-fluid pe-0"
