@@ -22,7 +22,7 @@ const router = createBrowserRouter([
             element: <HomePage />,
           },
           {
-            path: "/product/:productId",
+            path: "/product",
             element: <ProductDetailPage />,
             errorElement: <ErrorPage />,
             // loader: async ({ params }) => {

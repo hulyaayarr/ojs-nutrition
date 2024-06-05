@@ -240,3 +240,13 @@
 
   border: none !important;
 }
+.product-title {
+  font-size: 28.13px !important;
+  font-weight: 700 !important;
+  text-align: left;
+}
+.product-title-small {
+  font-size: 14.61px !important;
+  font-weight: 500 !important;
+  text-align: left;
+}
