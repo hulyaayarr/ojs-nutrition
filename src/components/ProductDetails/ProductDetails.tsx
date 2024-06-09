@@ -9,6 +9,7 @@ const ProductDetails = () => {
         silentTitle="EN ÇOK TERCİH EDİLEN PROTEİN TAKVİYESİ"
         starValue={5}
         totalComment={15656}
+        tags={["vejetaryen", "glutensiz"]}
       />
     </Container>
   );

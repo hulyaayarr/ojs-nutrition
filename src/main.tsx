@@ -7,6 +7,7 @@ import HomePage from "./routes/home.tsx";
 import ErrorPage from "./routes/error-page.tsx";
 import Root from "./routes/root.tsx";
 import ProductDetailPage from "./routes/productDetail.tsx";
+import Protein from "./routes/Protein.tsx";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
             //   if (!response.ok) throw new Error("Failed to load product data");
             //   return response.json();
             // },
+          },
+          {
+            path: "/protein",
+            element: <Protein />,
+            errorElement: <ErrorPage />,
           },
         ],
       },
