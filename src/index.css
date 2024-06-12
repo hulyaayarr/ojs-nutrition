@@ -12,6 +12,10 @@
   left: 10px;
   color: #aaa;
 }
+.search-big-screen {
+  border: 2px solid #919191;
+  border-radius: 4px;
+}
 .input-search {
   width: 390px;
   height: 36px;
@@ -21,10 +25,85 @@
   opacity: 0px;
   background: #f3f3f3;
 }
+.input-search-big {
+  width: 390px;
+  height: 36px;
+  padding: 9px 32px 9px 32px;
+  border: none;
+}
+.search-button {
+  border: 1px solid #919191 !important;
+  padding-top: 9px !important;
+  padding-bottom: 9px !important;
+  color: #fff;
+  background-color: #919191;
+}
+
+#basic-nav-dropdown {
+  padding: 8px 30px 8px 35px !important;
+}
+.dropdown-toggle::before {
+  content: "\f007";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  position: absolute;
+  left: 0.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 5px;
+}
+.dropdown-toggle {
+  padding: 10px;
+  border: 2px solid #919191 !important;
+  color: #919191 !important;
+  border-radius: 4px;
+}
+.dropdown-toggle::after {
+  content: "\f0d7"; /* Unicode for caret-down icon */
+  font-family: "Font Awesome 5 Free"; /* Use the correct Font Awesome family */
+  font-weight: 1000; /* For solid icons */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.7em; /* Adjust size as needed */
+}
+.navbar-basket-small {
+  background-color: transparent !important;
+  border: none !important;
+  display: flex;
+  align-items: center;
+}
+.navbar-basket-big {
+  display: flex;
+  align-items: center;
+  border: none !important;
+  width: 111.34px;
+  height: 46px;
+  gap: 0px;
+  opacity: 0px;
+  background-color: #919191 !important;
+  color: #fff !important;
+}
+.basket-text {
+  padding: 10px 8px 10px 8px;
+}
+.basket-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: smaller;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 25px;
+  background-color: #ed2727;
+}
+
 .down-navbar {
   background: #222222;
 }
-
 .dark-nav {
   text-decoration: none;
   color: #fff;
