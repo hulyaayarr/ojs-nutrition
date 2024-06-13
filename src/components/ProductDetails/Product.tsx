@@ -1,16 +1,41 @@
 import Rating from "@mui/material/Rating";
-import { Col, Row } from "react-bootstrap";
+import { useState } from "react";
+import { Button, Col, Row } from "react-bootstrap";
 
-// const allFlavors = [
-//   'Bisküvi',
-//   'Çikolata',
-//   'Muz',
-//   'Salted Caramel',
-//   'Choco Nut',
-//   'Hindistan Cevizi',
-//   'Raspberry Cheesecake',
-//   'Çilek'
-// ];
+const allFlavors = [
+  {
+    name: "Bisküvi",
+    color: "#E6BC79",
+  },
+  {
+    name: "Çikolata",
+    color: "#56321D",
+  },
+  {
+    name: "Muz",
+    color: "#F1D018",
+  },
+  {
+    name: "Salted Caramel",
+    color: "#B64300",
+  },
+  {
+    name: "Choco Nut",
+    color: "#7B3F00",
+  },
+  {
+    name: "Hindistan Cevizi",
+    color: "#BA9051",
+  },
+  {
+    name: "Raspberry Cheesecake",
+    color: "#CC1E5F",
+  },
+  {
+    name: "Çilek",
+    color: "#D61F33",
+  },
+];
 
 const Product = ({
   productName,
@@ -25,6 +50,14 @@ const Product = ({
   totalComment: number;
   tags: string[];
 }) => {
+  const [selectedFlavorIndex, setSelectedFlavorIndex] = useState<number | null>(
+    null
+  );
+
+  const handleClick = (index: number) => {
+    setSelectedFlavorIndex(index);
+  };
+
   return (
     <>
       <Row className="mt-3">
@@ -50,6 +83,26 @@ const Product = ({
           ))}
           <div className="border-bottom my-4"></div>
           <h4>AROMA:</h4>
+          {allFlavors.map((flavor, index) => (
+            <Button
+              key={index}
+              className="flavor-buttons p-0 ps-3 "
+              style={{
+                border: `3px solid ${
+                  selectedFlavorIndex === index ? "#2126AB" : "#e5e5e5"
+                }`,
+              }}
+              onClick={() => handleClick(index)}
+            >
+              {flavor.name}{" "}
+              <span
+                className="flavor-span "
+                style={{
+                  background: `${flavor.color}`,
+                }}
+              ></span>
+            </Button>
+          ))}
         </Col>
       </Row>
     </>

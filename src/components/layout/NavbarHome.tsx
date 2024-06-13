@@ -1,4 +1,5 @@
-import React from "react";
+// NavbarHome.tsx
+import React, { useState } from "react";
 import {
   Container,
   Nav,
@@ -9,18 +10,26 @@ import {
   Row,
 } from "react-bootstrap";
 import CheckDevice from "../HomePage/CheckDevice";
+import NavbarInfo from "./NavbarInfo";
+import SideNav from "./SideNav";
 
 const NavbarHome = () => {
   const device = CheckDevice();
   const isPhone = device === "phone";
+  const isTablet = device === "tablet";
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <>
       <Navbar expand="lg">
         <Container className="d-flex">
           <div className="d-md-none">
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
+            <Navbar.Toggle onClick={toggleNav} />
+            {!isPhone && (
               <Nav className="me-auto">
                 <Nav.Link href="#home">HESABIM</Nav.Link>
                 <Nav.Link href="#link">MÜŞTERİ YORUMLARI</Nav.Link>
@@ -39,7 +48,7 @@ const NavbarHome = () => {
                   </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
-            </Navbar.Collapse>
+            )}
           </div>
 
           <div className="order-md-1">
@@ -72,7 +81,7 @@ const NavbarHome = () => {
           <div
             className={
               isPhone
-                ? "search order-md-2 mt-3"
+                ? "search order-md-2 mt-3 "
                 : "search-big-screen order-md-2"
             }
           >
@@ -86,6 +95,7 @@ const NavbarHome = () => {
                     : "Aradığınız ürünü yazınız"
                 }
                 type="text"
+                style={{ width: isTablet ? "159px" : "316px" }}
               />
               {!isPhone && <button className="search-button">ARA</button>}
             </div>
@@ -107,32 +117,32 @@ const NavbarHome = () => {
         <Container>
           {!isPhone && (
             <Row className="dark-nav-row">
-              <Col lg={2}>
+              <Col md={2}>
                 <a className="dark-nav" href="/protein">
                   PROTEİN
                 </a>
               </Col>
-              <Col lg={2}>
+              <Col md={2}>
                 <a className="dark-nav" href="">
                   SPOR GIDALARI
                 </a>
               </Col>
-              <Col lg={2}>
+              <Col md={2}>
                 <a className="dark-nav" href="">
                   SAĞLIK
                 </a>
               </Col>
-              <Col lg={2}>
+              <Col md={2}>
                 <a className="dark-nav" href="">
                   GIDA
                 </a>
               </Col>
-              <Col lg={2}>
+              <Col md={2}>
                 <a className="dark-nav" href="">
                   VİTAMİN
                 </a>
               </Col>
-              <Col lg={2}>
+              <Col md={2}>
                 <a className="dark-nav" href="">
                   TÜM ÜRÜNLER
                 </a>
@@ -141,6 +151,9 @@ const NavbarHome = () => {
           )}
         </Container>
       </div>
+
+      {isTablet && <NavbarInfo />}
+      <SideNav isOpen={isOpen} toggleNav={toggleNav} />
     </>
   );
 };

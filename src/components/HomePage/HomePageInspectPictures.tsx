@@ -1,4 +1,4 @@
-import { Button, Col } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 
 const HomePageInspectPictures = ({ product }: { product: string }) => {
   return (
@@ -9,7 +9,9 @@ const HomePageInspectPictures = ({ product }: { product: string }) => {
         alt={product}
       />
       <p className="inspect-text">{product.toUpperCase()}</p>
-      <Button className="inspect-button">İNCELE</Button>
+      <a className="btn btn-primary inspect-button" href={`/${product}`}>
+        İNCELE
+      </a>
     </Col>
   );
 };
